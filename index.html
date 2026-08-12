@@ -15,12 +15,5 @@
             </canvas>
             <script type="module" src="js/game/game.js"></script>
         </div>
-
-        <script>
-            document.getElementById('gameCanvas').addEventListener('click', function() {
-                const audio = new Audio('main.mp3');
-                audio.play().catch(e => console.log('播放失败:', e));
-            });
-        </script>
     </body>
 </html>
