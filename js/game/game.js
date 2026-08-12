@@ -10,8 +10,8 @@ const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
 // 屏幕信息
-const width = window.innerWidth;
-const height = window.innerHeight;
+let width = window.innerWidth;
+let height = window.innerHeight;
 
 // 地图
 const map = {}; // key = 'x.y'
@@ -41,6 +41,8 @@ function gameLoop() {
 function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    width = window.innerWidth;
+    height = window.innerHeight;
 }
 
 // 初始化和启动
@@ -57,7 +59,7 @@ init();
 /* 监听事件 */
 // 屏幕大小变化自动更新
 window.onresize = function() {
-    resize(canvas);
+    resize();
 }
 
 // 按下按键时触发对应按键处理函数
